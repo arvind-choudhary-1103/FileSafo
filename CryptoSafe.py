@@ -66,7 +66,7 @@ def return_files_key():
 @app.route('/return-files-data/')
 def return_files_data():
   try:
-    return send_file('./Output.txt',download-name='Output.txt',as_attachment=True)
+    return send_file('./Output.txt',download_name='Output.txt',as_attachment=True)
   except Exception as e:
     return str(e)
 
@@ -87,5 +87,4 @@ def upload_file():
     return render_template('Invalid.html')
     
 if __name__ == '__main__':
-    # run app in debug mode on port 5000
-    app.run(debug=True, port=80, host='0.0.0.0')
+  app.run(debug=True)
