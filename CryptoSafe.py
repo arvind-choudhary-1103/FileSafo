@@ -59,14 +59,14 @@ def allowed_file(filename):
 @app.route('/return-files-key/')
 def return_files_key():
   try:
-    return send_file('./Secured.txt',attachment_filename='Secured.txt',as_attachment=True)
+    return send_file('./Secured.txt',download_name='Secured.txt',as_attachment=True)
   except Exception as e:
     return str(e)
 
 @app.route('/return-files-data/')
 def return_files_data():
   try:
-    return send_file('./Output.txt',attachment_filename='Output.txt',as_attachment=True)
+    return send_file('./Output.txt',download-name='Output.txt',as_attachment=True)
   except Exception as e:
     return str(e)
 
